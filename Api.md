@@ -270,7 +270,7 @@ Inheriting composition document is done by opening a document type (for example 
 ***NB!*** Document Type properties must be unique in the whole backoffice otherwise there will be conflicts when inheriting compositions.
 
 ### Base DocTypes
-[Basic Page Document Type](https://www.google.com)
+[Page DocType](https://github.com/IncredibleWeb/architecture/blob/master/DocTypes/page.udt)
 
 ## Responsive Images
 The web applications will make use of [srcset](https://www.w3.org/TR/html-srcset/) to display responsive images. The API is responsible for responding with an array of the difference sizes/version of the same image. Each image will observe the following structure:
