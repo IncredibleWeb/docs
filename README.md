@@ -5,4 +5,4 @@ The new API aims to serve both client and server-side rendering by removing any 
 The architecture provides a distinct line of separation between the APIs and the frontend framework. Previously, through ASP.NET MVC the controllers & view models were coupled with the business logic that was used to build the views. By removing these these from our .NET application, our .NET application is only restricted to business logic and will send all responses in JSON.
 The API's response can then be consumed by a client-side application (such as a single-page app) or a server-side NodeJS application without knowledge of the internal workings of the API - **black box concept**. Additionally, if the application being developed supports both server & client-side interactions, then it is able to share the same modules between both applications - **isomorphic JavaScript**.
 
-// TODO: Insert image here
+![alt text](https://github.com/IncredibleWeb/architecture/blob/feature/addReadme/Incredible-Api-Architecture.jpg)
