@@ -274,6 +274,7 @@ Inheriting composition document is done by opening a document type (for example 
 ### Base DocTypes
 - [Page](https://github.com/IncredibleWeb/architecture/blob/master/DocTypes/page.udt)
 
+
 ## Responsive Images
 The web applications will make use of [srcset](https://www.w3.org/TR/html-srcset/) to display responsive images. The API is responsible for responding with an array of the difference sizes/version of the same image. Each image will observe the following structure:
 ```
