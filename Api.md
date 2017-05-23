@@ -85,14 +85,14 @@ public class Member
 }
 ```
 ## REST Conventions
-`GET /users` - Retrieves a list of users__
-`GET /users/36` - Retrieves a user with UID 36__
-`GET /users/36/orders` - Retrieves a list of orders made by user with UID 36__
-`GET /users/36/orders/4` - Retrieves order with UID 4 made by user UID 36__
-`GET /users/?name=john-doe` - Retrieves user John Doe by name__
+`GET /users` - Retrieves a list of users<br />
+`GET /users/36` - Retrieves a user with UID 36<br />
+`GET /users/36/orders` - Retrieves a list of orders made by user with UID 36<br />
+`GET /users/36/orders/4` - Retrieves order with UID 4 made by user UID 36<br />
+`GET /users/?name=john-doe` - Retrieves user John Doe by name<br />
 `GET /users/?name=john-doe/orders` - Retrieves orders made by user John Doe
 
-`POST /users` - Creates a new user__
+`POST /users` - Creates a new user<br />
 `POST /users/36/orders` - Creates a new order belong to user with UID 36
 
 `PUT /users/36` - Updates user with UID 36 (**Note that `PUT` will replace the entire object**)
