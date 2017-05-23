@@ -260,9 +260,9 @@ Logging is done using Umbraco's `LogHelper` as shown in the global.asax.cs above
 The document type is the definiton for your content, but it is not the actual data itself. Creating document types is made by opening the Settings tab in the Umbraco Backoffice and right clicking "Document Types" button. The structure at the moment is a combination of nested document types and compositions.
 
 ### Nested Document Types
-Nested document types have hierarchy in the backoffice and that makes it easier to see the structure. In order to create a child DocType a permission should be set on the Parent DocType. This can be done by going to the Parent DocType page and click on Permissions. You can choose the childs of it under that tab.
+Nested document types have hierarchy in the backoffice and that makes it easier to see the structure. Creating a Child DocType is done by right clicking the Parent DocType.
 
-Example: Banner Folder (DocType) -> Banner (DocType)
+Example: Page (DocType) -> Home (DocType)
 
 ### Compositions
 Compositions are modular document types. This means that every document type which is part of the compositions has properties which can be inherited by other document types. It is mainly used for base document types like Page, Meta and more.
