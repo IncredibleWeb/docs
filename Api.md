@@ -1,4 +1,6 @@
 # API
+This chapter describes the architecture of the API which serves the JSON content.
+
 ## Prerequisites
 - Microsoft Visual Studio
 - MSSQL & Microsoft SQL Management Studio
