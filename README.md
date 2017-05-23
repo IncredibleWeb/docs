@@ -7,4 +7,5 @@ The API's response can then be consumed by a client-side application (such as a 
 
 ![alt text](https://github.com/IncredibleWeb/architecture/blob/master/Img/Incredible-Api-Architecture.jpg)
 
+## Chapters
 - **[API](https://github.com/IncredibleWeb/architecture/blob/master/Api.md)**
