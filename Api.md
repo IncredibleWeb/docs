@@ -320,6 +320,7 @@ The release process will grap the published artifact and release it to a deploym
 A release defenition expects an artifact from a Build definition and deploys it to an environment such as a web app.
 
 ## Drawbacks
-- Due to the changes made to the routing, Umbraco will not be synced.
-- Templates will not be synced to Umbraco
-- Most of the functionality of Umbraco like Preview, Grid Editor.. etc functionality will be lost.
+The major drawbacks from the proposed architecture is that Umbraco libraries are no longer available on the rendering of content, therefore all responses from the API should already be rendered for to be displayed by the server or client side applications.
+This also means that functionality bundled into Umbraco, such as the usage of templates to assign different ActionResults or Views; or the ability to preview a page before publishing are lost. 
+Another minor caveat is that internal links created in rich text editors will need to be parsed as the raw value would be of the form localizing:12345.
+Finally this setup requires multiple hosting environments and SSL certificates.
