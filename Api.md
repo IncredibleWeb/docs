@@ -89,8 +89,7 @@ public class Member
 `GET /users/36` - Retrieves a user with UID 36<br />
 `GET /users/36/orders` - Retrieves a list of orders made by user with UID 36<br />
 `GET /users/36/orders/4` - Retrieves order with UID 4 made by user UID 36<br />
-`GET /users/?name=john-doe` - Retrieves user John Doe by name<br />
-`GET /users/?name=john-doe/orders` - Retrieves orders made by user John Doe
+`GET /users/?name=john-doe` - Filters through all the users and retrieves only the users with name John Doe.
 
 `POST /users` - Creates a new user<br />
 `POST /users/36/orders` - Creates a new order belong to user with UID 36
