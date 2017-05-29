@@ -190,6 +190,11 @@ Add the following `appSettings` as per below:
         <add key="Site:Url" value="http://my-api.localhost" />
     </appSetting>
 ```
+Add the following inside `httpProtocol/customHeaders`
+```csharp
+    <remove name="X-Frame-Options" />
+    <add name="X-Frame-Options" value="sameorigin" />
+```
 ### Web.release.config
 Replace the entire `web.release.config` with the following code which will only be included when the application is published to production.
 ```csharp
