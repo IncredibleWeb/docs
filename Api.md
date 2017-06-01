@@ -84,6 +84,13 @@ public class Member
     }
 }
 ```
+All methods in the API should return IHttpActionResult
+```csharp
+public IHttpActionResult Get()
+{
+    //Code here
+}
+```
 ## REST Conventions
 `GET /users` - Retrieves a list of users<br />
 `GET /users/36` - Retrieves a user with UID 36<br />
@@ -158,6 +165,8 @@ public static void Register(HttpConfiguration config)
 - Install UmbracoFileSystemProviders.Azure to store files on Azure rather than locally on each machine.
 `PM> Install-Package UmbracoFileSystemProviders.Azure -IncludePrerelease`
 After installation, navigate to the file Config/FileProviders.config and update the storage connection string to the Azure storage account.
+
+- Exclude Umbraco, Umbraco_Client and Views folders from the project
 
 ## Configurations
 ### Web.config
