@@ -121,6 +121,10 @@ public IHttpActionResult Get()
 - Do not install any starter packs.
 - After setup is completed, you should be able to access Umbraco using the path `/umbraco'. 
 
+### UmbracoSettings.config
+- Set the node ID for `<error404>` to the home page. This will remove the "This page is intentionally left ugly" error when throwing a 404.
+- Set the `<notifications/email>` to `support@incredible-web.com`
+
 ### Additional Setup
 - Install Microsoft.AspNet.WebApi.Cors
 `PM> Install-Package Microsoft.AspNet.WebApi.Cors`
