@@ -9,4 +9,3 @@ The API's response can then be consumed by a client-side application (such as a 
 
 ## Chapters
 - **[API](https://github.com/IncredibleWeb/architecture/blob/master/Api.md)**
-- **[Security](https://github.com/IncredibleWeb/architecture/blob/master/security.md)**
