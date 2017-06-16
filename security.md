@@ -22,7 +22,7 @@ Primarily Let's Encrypt was designed for Linux environments but as its popularit
 ## Step 2
 We now need to set up a number of application settings on our web app.
 
-------PUT IMAGE -------
+![alt text](https://github.com/IncredibleWeb/architecture/blob/master/Img/Let's%20Encrypt.png)
 
 * **letsencrypt:Tenant** - is highlighted in the above image as #1.
 * **letsencrypt:SubscriptionId** - is #2
