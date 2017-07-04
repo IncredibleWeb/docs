@@ -164,6 +164,9 @@ public static void Register(HttpConfiguration config)
     // enable CORS
     var cors = new EnableCorsAttribute("localhost:3000", "*", "*");
     config.EnableCors(cors);
+    
+    // disable XML formatter
+    config.Formatters.Remove(config.Formatters.XmlFormatter);
 }
 ```
 - Install UmbracoFileSystemProviders.Azure to store files on Azure rather than locally on each machine.
