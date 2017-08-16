@@ -47,7 +47,8 @@ The extension will install a new folder called '.well-known' folder. This folder
 On **Express JS** the following line (or similar) should be added to the app.js in order to allow routing access to the static **.well-known** folder:
 `app.use('/.well-known', express.static('.well-known'));`
 
-
+When its an **Umbraco** app, the following line should be added to the **umbracoReservedPaths** key
+`~/.well-known`
 
 
 
