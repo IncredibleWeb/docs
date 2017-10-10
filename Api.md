@@ -91,6 +91,33 @@ public IHttpActionResult Get()
     //Code here
 }
 ```
+## Models vs DTOs
+Models are the object defenitions we're using to express a number of domains within our solution which will be used by our APIs to receive or send information. Models should as much as possible be domain driven ex Product, Customer, Page etc.
+
+DTOs by definition are objects used to transfer data between layers in a multi-tier architecture. Often DTOs are also used by APIs to expose information. In our case in order to distinguish between our own models and 3rd party models we will be using DTOs to define 3rd party object definitions.
+
+## Model Structure
+Models should be grouped by domains in the form of a project folder ex Products, News, Contacts. Moreover Models should be further grouped into Custom and SDK models. The idea is to have common models whicha are frequently required in Umbraco based applications grouped together so that we can easily identify which code is reusable and which isn't.
+
+Some models may need to be further customised to cater for specific requirements pertaining to the project. In which case we will create the custom object in the Custom folder under the same domain as in the SDK folder and prepend 'Custom' to it. The custom object should inherit the SDK object.
+
+```
+Models
+    - Custom
+        - About
+        - Careers
+        - News
+        - Products
+            - CustomProductsPage.cs
+    - Sdk
+        - Contacts
+        - News
+        - Pages
+        - Products
+            - Product.cs
+            - ProductsPage.cs
+```
+
 ## REST Conventions
 `GET /users` - Retrieves a list of users<br />
 `GET /users/36` - Retrieves a user with UID 36<br />
@@ -106,6 +133,22 @@ public IHttpActionResult Get()
 `PATCH /users/36` - Partially updates user with UID 36
 
 `DELETE /users/36` - Deletes user with UID 36
+
+## Guidlines for Umbraco APIs
+1) Organise the Controller APIs in SDK, Custom and Shared folders
+2) Content which is required in multuple controllers should be moved to the BasePageController when possible
+3) Services should be used to encapsulate logic which is re-used in APIs
+4) Wherever possible, Services should return IQueryable objects so as to allow further query manipulation at Controller level
+5) Controller APIs should be kept as lean as possible and Services should contain most of the logic (its easier to maintain Services through DI than API endpoints)
+6) Do not use REST conventions for non-REST calls. 
+    - PageController: api/page/{url} - returns one page with a unique URL identifier - Correct
+    - AboutController: api/about - returns a list with one about page item - Incorrect and should be replaced by api/about/getpage
+7) Page Controllers should have a 'getPage' endpoint which will return all the page data required
+8) Regular Controllers should respect REST guidlines and expose domain specific CRUD operations apart from custom methods
+9) In REST contollers and methods put id as part of url
+    - api/products/{id}
+10) Do not use the same controller for different purposes ex to return a list but also to return one item, keep them seperate.
+11) Use meaningful return status codes ex. StatusCode(HttpStatusCode.BadRequest)
 
 ## Umbraco Setup
 - Create a new Visual Studio solution and Empty Project, including dependencies for MVC. Use the naming convention, `MyProject.Api` for the project.
